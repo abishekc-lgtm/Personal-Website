@@ -126,6 +126,32 @@
     transition: opacity 0.18s;
     text-decoration: none;
   }
+  .hero-layout {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 60px;
+ }
+ 
+ .hero-left {
+   flex: 1;
+ }
+ 
+ .hero-right {
+   flex-shrink: 0;
+ }
+ 
+ .hero-right img {
+   width: 320px;
+   height: 320px;
+   object-fit: cover;
+   border-radius: 20px;
+ 
+   border: 1px solid rgba(255,255,255,0.08);
+ 
+   box-shadow:
+       0 20px 60px rgba(0,0,0,0.4);
+ }
   .btn-primary:hover { opacity: 0.85; }
   .btn-secondary {
     background: transparent;
@@ -367,41 +393,41 @@
 <!-- HOME -->
 <div class="page active" id="page-home">
   <div class="container">
-  <div class="hero">
-    <div class="hero-layout">
-
-    <div class="hero-left">
-      <p class="hero-eyebrow" id="hero-eyebrow">MTech Student · IIT Roorkee</p>
-
-      <h1 class="hero-name" id="hero-name">
-        Abishek<br><em>Researcher</em>
-      </h1>
-
-      <p class="hero-bio" id="hero-bio">
-        I work at the intersection of Deep Learning, Large Language Models,
-        and Generative Models — exploring how machines can see,
-        understand, and create.
-      </p>
-
-      <div class="hero-tags" id="hero-tags"></div>
-
-      <div class="hero-actions">
-        <button class="btn-primary" onclick="navigate('projects')">
-          View Projects
-        </button>
-
-        <button class="btn-secondary" onclick="navigate('blog')">
-          Read Blog
-        </button>
+    <div class="hero">
+      <div class="hero-layout">
+  
+      <div class="hero-left">
+        <p class="hero-eyebrow" id="hero-eyebrow">MTech Student · IIT Roorkee</p>
+  
+        <h1 class="hero-name" id="hero-name">
+          Abishek<br><em>Researcher</em>
+        </h1>
+  
+        <p class="hero-bio" id="hero-bio">
+          I work at the intersection of Deep Learning, Large Language Models,
+          and Generative Models — exploring how machines can see,
+          understand, and create.
+        </p>
+  
+        <div class="hero-tags" id="hero-tags"></div>
+  
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="navigate('projects')">
+            View Projects
+          </button>
+  
+          <button class="btn-secondary" onclick="navigate('blog')">
+            Read Blog
+          </button>
+        </div>
       </div>
+  
+      <div class="hero-right">
+        <img src="images/profile.jpg" alt="Abishek">
+      </div>
+  
     </div>
-
-    <div class="hero-right">
-      <img src="images/profile.jpg" alt="Abishek">
-    </div>
-
   </div>
-</div>
     <hr class="divider">
     <p class="section-label">Recent Projects</p>
     <div id="home-projects-preview"></div>
